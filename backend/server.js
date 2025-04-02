@@ -7,10 +7,17 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+// Allow CORS only for your frontend domain
+const allowedOrigins = [process.env.FRONTEND_URL]; 
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true 
+}));
 
 const PORT = process.env.PORT || 5000;
-
 
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
@@ -23,7 +30,6 @@ app.use("/api/students", studentRoutes);
 
 const TransactionsRoute = require("./routes/fees");
 app.use("/api/students", TransactionsRoute);
-
 
 mongoose
   .connect(process.env.MONGO_URI)
