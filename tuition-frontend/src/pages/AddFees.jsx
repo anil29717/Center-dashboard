@@ -17,7 +17,7 @@ const AddFees = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/students");
+        const response = await axios.get("https://center-dashboard.onrender.com/api/students");
         setStudents(response.data);
       } catch (error) {
         console.error("Error fetching students:", error);
@@ -35,7 +35,7 @@ const AddFees = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/students/add-fees",
+        "https://center-dashboard.onrender.com/api/students/add-fees",
         {
           studentName: selectedStudent,
           amount,

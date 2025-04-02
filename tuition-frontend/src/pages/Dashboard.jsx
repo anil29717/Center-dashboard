@@ -19,7 +19,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/dashboard");
+        const response = await axios.get("https://center-dashboard.onrender.com/api/dashboard");
         const { totalStudents, activeStudents, inactiveStudents, totalFeesPerMonth, totalFeesReceived } = response.data;
   
         setTotalStudents(totalStudents);

@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      const response = await axios.post("https://center-dashboard.onrender.com/api/auth/login", { email, password });
       if (response.data.success) {
         localStorage.setItem("user", JSON.stringify(response.data));
         navigate("/");

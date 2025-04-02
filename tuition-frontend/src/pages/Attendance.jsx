@@ -12,7 +12,7 @@ const Attendance = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/students")
+      .get("https://center-dashboard.onrender.com/api/students")
       .then((response) => setStudents(response.data))
       .catch((error) => console.error("Error fetching students:", error));
   }, []);
@@ -23,7 +23,7 @@ const Attendance = () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/students/${studentId}/attendance`
+        `https://center-dashboard.onrender.com/api/students/${studentId}/attendance`
       );
 
       const attendanceRecords = response.data.attendance;
@@ -53,7 +53,7 @@ const Attendance = () => {
     setIsLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/students/mark-attendance", {
+      await axios.post("https://center-dashboard.onrender.com/api/students/mark-attendance", {
         studentId: selectedStudent,
         status,
       });

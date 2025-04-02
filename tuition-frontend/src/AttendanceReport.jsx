@@ -10,7 +10,7 @@ const AttendanceReport = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/students/attendance-report")
+      .get("https://center-dashboard.onrender.com/api/students/attendance-report")
       .then((response) => {
         setAttendanceData(response.data);
         setLoading(false);

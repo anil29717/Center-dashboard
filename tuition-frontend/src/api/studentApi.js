@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/students"; // Update if backend URL changes
+const API_URL = "https://center-dashboard.onrender.com/api/students"; // Update if backend URL changes
 
 // Fetch all students
 export const fetchStudents = async () => {
