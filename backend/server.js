@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
 
-const dashboardRoutes = require("./routes/dashboard");
+const dashboardRoutes = require("./routes/Dashboard");
 app.use("/api/dashboard", dashboardRoutes);
 
 const studentRoutes = require("./routes/Student");
