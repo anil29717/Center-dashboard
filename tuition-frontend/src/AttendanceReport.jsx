@@ -24,16 +24,16 @@ const AttendanceReport = () => {
   const getDaysInMonth = (month, year) => new Date(year, month, 0).getDate();
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-purple-900 w-full h-screen pt-30 pb-20">
-  <div className="relative max-w-3xl mx-auto p-6 bg-gradient-to-br from-gray-900 to-purple-900 w-full shadow-xl rounded-xl border border-violet-700/30 backdrop-blur-md animate-fadeIn overflow-hidden">
+    <div className="bg-gradient-to-br from-gray-900 to-purple-900 w-full h-screen flex items-center justify-center">
+  <div className="relative max-w-3xl w-full p-6 bg-gradient-to-br from-gray-900 to-purple-900 shadow-xl rounded-xl border border-violet-700/30 backdrop-blur-md animate-fadeIn overflow-hidden max-h-[90vh] flex flex-col">
     
     {/* Glassmorphism effects */}
     <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/5 rounded-xl backdrop-blur-sm z-0"></div>
     <div className="absolute top-0 right-0 w-64 h-64 bg-violet-400/10 rounded-full filter blur-xl z-0"></div>
     <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-400/10 rounded-full filter blur-xl z-0"></div>
 
-    {/* Content with Scrollable Area */}
-    <div className="relative z-10 max-h-[80vh] overflow-y-auto p-4">
+    {/* Scrollable Content */}
+    <div className="relative z-10 overflow-y-auto px-4 flex-1">
       <h2 className="text-2xl font-bold text-center text-violet-100 mb-8 flex items-center justify-center gap-2 animate-pulseLight">
         <CalendarDays size={24} className="text-violet-300" />
         Attendance Report
